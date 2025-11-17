@@ -1,5 +1,6 @@
 # This workflow is triggered when a release is published via the UI
-name: Application example release workflow
+# The workflow is only executed if the release is a tag and the target_commitish is a release branch
+name: Template release workflow
 
 # Start the workflow as soon as a release has been published via the UI
 on:
@@ -7,13 +8,9 @@ on:
     types: [published]
 
 permissions:
-  contents: read    # required for checkout
+  contents: read     # required for checkout
   packages: write    # required for pulling the container
-  actions: write     # required for artifact uploading
 
-env:
-  TEMPLATE_PATH: working-directory
-  
 jobs:
   call-development:
     name: Build the package
@@ -28,7 +25,7 @@ jobs:
     needs: call-development
     runs-on: ubuntu-24.04
     container:
-      image: ghcr.io/simatic-ax/ci-images/apax-ci-image:3.5.0
+      image: ghcr.io/simatic-ax/ci-images/apax-ci-image:3.4.2
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
@@ -38,39 +35,17 @@ jobs:
         with:
           # checks out the branch that has been selected during the release process
           ref: ${{ github.event.release.target_commitish }}
-          fetch-depth: 0
 
-      # Set the version of the template package itself to the version of the release
       - name: Version package
         uses: simatic-ax/actions/apax-version@v3
         with:
           version: ${{ github.event.release.tag_name }}
 
-      # Templatify the repository content
-      - name: Templatify repository
-        uses: simatic-ax/actions/apax-templatify@v3
-        with:
-          version: ${{ github.event.release.tag_name }}
-
-      # Set the version of the templates content to the version of the release
-      # This is the version the user will see in the apax.yml
-      # once he opens a project create based on this template
-      - name: Version package
-        uses: simatic-ax/actions/apax-version@v3
-        with:
-          version: ${{ github.event.release.tag_name }}
-          path: ${{ env.TEMPLATE_PATH }}/template
-
-      # Create a package out of the template
-      # This is the package the user will refer to
-      # during an apax create based on this template
-      - name: Pack the template
+      - name: Package template
         uses: simatic-ax/actions/apax-pack@v3
         with:
           key: ${{ secrets.APAX_SIGNKEY }}
-          path: ${{ env.TEMPLATE_PATH }}
 
-      # Login to the GitHub registry
       - name: Login to required registries
         uses: simatic-ax/actions/apax-login@v3
         with:
@@ -78,11 +53,9 @@ jobs:
           registries: |
             https://npm.pkg.github.com/,${{ secrets.GITHUB_TOKEN }}
 
-      # Publish the package to the GitHub registry
       - name: Publish apax package
         uses: simatic-ax/actions/apax-publish@v3
         with:
           registries: |
             https://npm.pkg.github.com
           tag: latest
-          path: ${{ env.TEMPLATE_PATH }}
