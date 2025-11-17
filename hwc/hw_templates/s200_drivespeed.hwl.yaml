@@ -1,0 +1,21 @@
+Templates:
+  Modules:
+  - Name: 's200_drivespeed_Template'
+    Placeholders:
+    - Name: 'NAME'
+    - Name: 'IAREA'
+    - Name: 'QAREA'
+    Content:
+      Name: '${NAME}'
+      TypeIdentifier:
+        FileName: 'GSDML-V2.42-SIEMENS-SINAMICS_S200-20240814.XML'
+        GsdId: 'IDM_DRVSPD'
+      IoConfiguration:
+        InputAddress: '${IAREA}'
+        OutputAddress: '${QAREA}'
+      Submodules:
+      - Name: 'telegram1'
+        TypeIdentifier:
+          FileName: 'GSDML-V2.42-SIEMENS-SINAMICS_S200-20240814.XML'
+          GsdId: 'IDS_TEL1'
+        Slot: 3

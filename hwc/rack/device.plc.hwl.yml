@@ -1,0 +1,8 @@
+Devices:
+  - Name: "device_plc"
+    Modules:
+      - Apply: "cpu1517v_v40_Template"
+        Arguments:
+          NAME: "vplc-427e"
+          IP_ADDRESS_X1: "192.168.170.121/24"
+          PROFINET_DEVICE_NAME_X1: "vplc-427e"

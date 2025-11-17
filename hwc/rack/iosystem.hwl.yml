@@ -1,0 +1,9 @@
+IoSystems:
+- Name: profinet_io_system
+  ControllerInterfaces:
+  - Ref: device_plc/vplc-427e/PROFINET_interface_1
+  DeviceInterfaces:
+  - Ref: device_drive_left_s200/s200_left/PN-IO
+  - Ref: device_drive_center_s200/s200_center/PN-IO
+  - Ref: device_drive_right_s200/s200_right/PN-IO
+  - Ref: device_et200sp/im_155_6/PN-IO

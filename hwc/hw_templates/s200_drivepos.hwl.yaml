@@ -1,0 +1,21 @@
+Templates:
+  Modules:
+  - Name: 's200_drivepos_Template'
+    Placeholders:
+    - Name: 'NAME'
+    - Name: 'IAREA'
+    - Name: 'QAREA'
+    Content:
+      Name: '${NAME}'
+      TypeIdentifier:
+        FileName: 'GSDML-V2.42-SIEMENS-SINAMICS_S200-20240814.XML'
+        GsdId: 'IDM_DRVPOS'
+      IoConfiguration:
+        InputAddress: '${IAREA}'
+        OutputAddress: '${QAREA}'
+      Submodules:
+      - Name: 'telegram111'
+        TypeIdentifier:
+          FileName: 'GSDML-V2.42-SIEMENS-SINAMICS_S200-20240814.XML'
+          GsdId: 'IDS_TEL111'
+        Slot: 3

@@ -1,0 +1,23 @@
+Devices:
+  - Name: "device_drive_right_s200"
+    Modules:
+      #the dap/interface module/head module
+      - Apply: "s200_im_v64_Template"
+        Arguments:
+          NAME: "s200_right"
+          IP_ADDRESS_X150: "192.168.170.12/24"
+          PROFINET_DEVICE_NAME_X150: "s200-right"
+
+      #the drive object [in case of an speed-drive]
+      - Apply: "s200_drivespeed_Template"
+        Arguments:
+          NAME: "drivespd"
+          IAREA: "320"
+          QAREA: "320"
+
+        #the drive object [in case of an pos-drive]
+      # - Apply: "s200_drivepos_Template"
+      #   Arguments:
+      #     NAME: "drivepos"
+      #     IAREA: "320"
+      #     QAREA: "320"

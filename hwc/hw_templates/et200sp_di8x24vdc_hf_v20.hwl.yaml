@@ -1,0 +1,166 @@
+Templates:
+  Modules:
+  - Name: 'et200sp_di8x24vdc_hf_v20_Template'
+    Placeholders:
+      - Name: NAME
+      - Name: IAREA
+    Content:
+      Name: "${NAME}"
+      TypeIdentifier:
+        FileName: 'GSDML-V2.45-SIEMENS-ET200SP-20241104.XML'
+        GsdId: 'DI 8x24VDC HF V2.0'
+      IoConfiguration:
+        InputAddress: "${IAREA}"
+      Parameters:
+        RecordDataList:
+        - IndexName: 'Inputs'
+          Values:
+          - OffsetName: 'Channel 0 Diagnostics: No supply voltage L+'
+            Value: False
+          - OffsetName: 'Channel 0 Diagnostics: Short circuit to ground'
+            Value: False
+          - OffsetName: 'Channel 0 Diagnostics: Wire break'
+            Value: False
+          - OffsetName: 'Channel 0 Input delay'
+            # Possible ValueNames: None | 0.05 ms | 0.1 ms | 0.4 ms | 0.8 ms | 1.6 ms | 3.2 ms | 12.8 ms | 20 ms
+            ValueName: '3.2 ms'
+          - OffsetName: 'Channel 0 Hardware interrupt on rising edge'
+            Value: False
+          - OffsetName: 'Channel 0 Hardware interrupt on falling edge'
+            Value: False
+          - OffsetName: 'Channel 0 activated'
+            Value: True
+          - OffsetName: 'Channel 0 Pulse stretching'
+            # Possible ValueNames: None | 0.05 s | 0.1 s | 0.2 s | 0.5 s | 1 s | 2 s
+            ValueName: 'None'
+          - OffsetName: 'Channel 1 Diagnostics: No supply voltage L+'
+            Value: False
+          - OffsetName: 'Channel 1 Diagnostics: Short circuit to ground'
+            Value: False
+          - OffsetName: 'Channel 1 Diagnostics: Wire break'
+            Value: False
+          - OffsetName: 'Channel 1 Input delay'
+            # Possible ValueNames: None | 0.05 ms | 0.1 ms | 0.4 ms | 0.8 ms | 1.6 ms | 3.2 ms | 12.8 ms | 20 ms
+            ValueName: '3.2 ms'
+          - OffsetName: 'Channel 1 Hardware interrupt on rising edge'
+            Value: False
+          - OffsetName: 'Channel 1 Hardware interrupt on falling edge'
+            Value: False
+          - OffsetName: 'Channel 1 activated'
+            Value: True
+          - OffsetName: 'Channel 1 Pulse stretching'
+            # Possible ValueNames: None | 0.05 s | 0.1 s | 0.2 s | 0.5 s | 1 s | 2 s
+            ValueName: 'None'
+          - OffsetName: 'Channel 2 Diagnostics: No supply voltage L+'
+            Value: False
+          - OffsetName: 'Channel 2 Diagnostics: Short circuit to ground'
+            Value: False
+          - OffsetName: 'Channel 2 Diagnostics: Wire break'
+            Value: False
+          - OffsetName: 'Channel 2 Input delay'
+            # Possible ValueNames: None | 0.05 ms | 0.1 ms | 0.4 ms | 0.8 ms | 1.6 ms | 3.2 ms | 12.8 ms | 20 ms
+            ValueName: '3.2 ms'
+          - OffsetName: 'Channel 2 Hardware interrupt on rising edge'
+            Value: False
+          - OffsetName: 'Channel 2 Hardware interrupt on falling edge'
+            Value: False
+          - OffsetName: 'Channel 2 activated'
+            Value: True
+          - OffsetName: 'Channel 2 Pulse stretching'
+            # Possible ValueNames: None | 0.05 s | 0.1 s | 0.2 s | 0.5 s | 1 s | 2 s
+            ValueName: 'None'
+          - OffsetName: 'Channel 3 Diagnostics: No supply voltage L+'
+            Value: False
+          - OffsetName: 'Channel 3 Diagnostics: Short circuit to ground'
+            Value: False
+          - OffsetName: 'Channel 3 Diagnostics: Wire break'
+            Value: False
+          - OffsetName: 'Channel 3 Input delay'
+            # Possible ValueNames: None | 0.05 ms | 0.1 ms | 0.4 ms | 0.8 ms | 1.6 ms | 3.2 ms | 12.8 ms | 20 ms
+            ValueName: '3.2 ms'
+          - OffsetName: 'Channel 3 Hardware interrupt on rising edge'
+            Value: False
+          - OffsetName: 'Channel 3 Hardware interrupt on falling edge'
+            Value: False
+          - OffsetName: 'Channel 3 activated'
+            Value: True
+          - OffsetName: 'Channel 3 Pulse stretching'
+            # Possible ValueNames: None | 0.05 s | 0.1 s | 0.2 s | 0.5 s | 1 s | 2 s
+            ValueName: 'None'
+          - OffsetName: 'Channel 4 Diagnostics: No supply voltage L+'
+            Value: False
+          - OffsetName: 'Channel 4 Diagnostics: Short circuit to ground'
+            Value: False
+          - OffsetName: 'Channel 4 Diagnostics: Wire break'
+            Value: False
+          - OffsetName: 'Channel 4 Input delay'
+            # Possible ValueNames: None | 0.05 ms | 0.1 ms | 0.4 ms | 0.8 ms | 1.6 ms | 3.2 ms | 12.8 ms | 20 ms
+            ValueName: '3.2 ms'
+          - OffsetName: 'Channel 4 Hardware interrupt on rising edge'
+            Value: False
+          - OffsetName: 'Channel 4 Hardware interrupt on falling edge'
+            Value: False
+          - OffsetName: 'Channel 4 activated'
+            Value: True
+          - OffsetName: 'Channel 4 Pulse stretching'
+            # Possible ValueNames: None | 0.05 s | 0.1 s | 0.2 s | 0.5 s | 1 s | 2 s
+            ValueName: 'None'
+          - OffsetName: 'Channel 5 Diagnostics: No supply voltage L+'
+            Value: False
+          - OffsetName: 'Channel 5 Diagnostics: Short circuit to ground'
+            Value: False
+          - OffsetName: 'Channel 5 Diagnostics: Wire break'
+            Value: False
+          - OffsetName: 'Channel 5 Input delay'
+            # Possible ValueNames: None | 0.05 ms | 0.1 ms | 0.4 ms | 0.8 ms | 1.6 ms | 3.2 ms | 12.8 ms | 20 ms
+            ValueName: '3.2 ms'
+          - OffsetName: 'Channel 5 Hardware interrupt on rising edge'
+            Value: False
+          - OffsetName: 'Channel 5 Hardware interrupt on falling edge'
+            Value: False
+          - OffsetName: 'Channel 5 activated'
+            Value: True
+          - OffsetName: 'Channel 5 Pulse stretching'
+            # Possible ValueNames: None | 0.05 s | 0.1 s | 0.2 s | 0.5 s | 1 s | 2 s
+            ValueName: 'None'
+          - OffsetName: 'Channel 6 Diagnostics: No supply voltage L+'
+            Value: False
+          - OffsetName: 'Channel 6 Diagnostics: Short circuit to ground'
+            Value: False
+          - OffsetName: 'Channel 6 Diagnostics: Wire break'
+            Value: False
+          - OffsetName: 'Channel 6 Input delay'
+            # Possible ValueNames: None | 0.05 ms | 0.1 ms | 0.4 ms | 0.8 ms | 1.6 ms | 3.2 ms | 12.8 ms | 20 ms
+            ValueName: '3.2 ms'
+          - OffsetName: 'Channel 6 Hardware interrupt on rising edge'
+            Value: False
+          - OffsetName: 'Channel 6 Hardware interrupt on falling edge'
+            Value: False
+          - OffsetName: 'Channel 6 activated'
+            Value: True
+          - OffsetName: 'Channel 6 Pulse stretching'
+            # Possible ValueNames: None | 0.05 s | 0.1 s | 0.2 s | 0.5 s | 1 s | 2 s
+            ValueName: 'None'
+          - OffsetName: 'Channel 7 Diagnostics: No supply voltage L+'
+            Value: False
+          - OffsetName: 'Channel 7 Diagnostics: Short circuit to ground'
+            Value: False
+          - OffsetName: 'Channel 7 Diagnostics: Wire break'
+            Value: False
+          - OffsetName: 'Channel 7 Input delay'
+            # Possible ValueNames: None | 0.05 ms | 0.1 ms | 0.4 ms | 0.8 ms | 1.6 ms | 3.2 ms | 12.8 ms | 20 ms
+            ValueName: '3.2 ms'
+          - OffsetName: 'Channel 7 Hardware interrupt on rising edge'
+            Value: False
+          - OffsetName: 'Channel 7 Hardware interrupt on falling edge'
+            Value: False
+          - OffsetName: 'Channel 7 activated'
+            Value: True
+          - OffsetName: 'Channel 7 Pulse stretching'
+            # Possible ValueNames: None | 0.05 s | 0.1 s | 0.2 s | 0.5 s | 1 s | 2 s
+            ValueName: 'None'
+        - IndexName: 'Potential group'
+          Values:
+          - OffsetName: 'Potential group'
+            # Possible ValueNames: Use potential group of the left module (dark BaseUnit) | Enable new potential group (light BaseUnit)
+            ValueName: 'Enable new potential group (light BaseUnit)'

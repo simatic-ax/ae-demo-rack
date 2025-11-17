@@ -1,0 +1,36 @@
+Templates:
+  Modules:
+  - Name: 'et200sp_im_155_6_pn_hf_v42_Template'
+    Placeholders:
+      - Name: NAME
+      - Name: IP_ADDRESS_X1
+      - Name: PROFINET_DEVICE_NAME_X1
+    Content:
+      Name: "${NAME}"
+      TypeIdentifier:
+        FileName: 'GSDML-V2.45-SIEMENS-ET200SP-20241104.XML'
+        GsdId: 'DIM HF/2 V4.2'
+      Interfaces:
+      - Name: 'PN-IO'
+        Label: 'X1'
+        Addresses:
+          Configured:
+          - IPv4: "${IP_ADDRESS_X1}"
+          - ProfinetDeviceName: "${PROFINET_DEVICE_NAME_X1}"
+        Parameters:
+          IECV22LLDPMode: False
+      Ports:
+      - Name: 'Port_1'
+        Label: 'X1 P1'
+      - Name: 'Port_2'
+        Label: 'X1 P2'
+      Parameters:
+        RecordDataList:
+        - IndexName: 'General head parameters'
+          Values:
+          - OffsetName: 'Diagnostics: Undervoltage'
+            Value: False
+        - IndexName: 'Configuration control'
+          Values:
+          - OffsetName: 'Configuration control'
+            Value: False

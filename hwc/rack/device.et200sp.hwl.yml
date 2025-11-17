@@ -1,0 +1,44 @@
+Devices:
+  # rack-name
+  - Name: "device_et200sp"
+    Modules:
+      # interface module/head module
+      - Apply: "et200sp_im_155_6_pn_hf_v42_Template"
+        # Template override-arguments:
+        Arguments:
+          NAME: "im_155_6"
+          IP_ADDRESS_X1: "192.168.170.20/24"
+          PROFINET_DEVICE_NAME_X1: "et200sp"
+      # slot1
+      - Apply: "et200sp_di8x24vdc_hf_v20_Template"
+        Arguments:
+          NAME: "di8_1"
+          IAREA: "9.0"
+      # slot2
+      - Apply: "et200sp_di8x24vdc_hs_v10_Template"
+        # Template override-arguments:
+        Arguments:
+          NAME: "di8_2"
+          IAREA: "8.0"
+      # slot3
+      - Apply: "et200sp_dq8x24vdc05a_hf_v20_Template"
+        # Template override-arguments:
+        Arguments:
+          NAME: "dq8_1"
+          QAREA: "1.0"
+      # slot4
+      - Apply: "et200sp_dq8x24vdc05a_st_v00_Template"
+        # Template override-arguments:
+        Arguments:
+          NAME: "dq8_2"
+          QAREA: "0.0"
+      # slot5
+      - Apply: "et200sp_ai4xi24wire_st_v11_Template"
+        # Template override-arguments:
+        Arguments:
+          NAME: "ai4_1"
+          IAREA: "0.0"
+      # slot6
+      - Apply: "et200sp_servermod_wo_io_Template"
+        Arguments:
+          NAME: "server_mod"

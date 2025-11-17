@@ -1,0 +1,11 @@
+files:
+  - certificate
+  - debug
+  - docs
+  - hwc
+  - src
+  - test
+  - apax-lock.json
+  - apax.yml
+  - README.md
+  - LICENSE.md

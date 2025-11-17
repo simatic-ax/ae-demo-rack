@@ -1,0 +1,18 @@
+# SIMATIC AX Trace Configuration
+name: drive-trace
+
+jobType: perpetual
+
+signals:
+  - driveLeftActive
+  - driveCenterActive
+  - driveRightActive
+
+  - driveLeftTargetSpeed
+  - P1.instDriveCtrlLeft._sinaSpeed.actualSpeed
+
+  - driveCenterTargetSpeed
+  - P1.instDriveCtrlCenter._sinaSpeed.actualSpeed
+
+  - driveRightTargetSpeed
+  - P1.instDriveCtrlRight._sinaSpeed.actualSpeed

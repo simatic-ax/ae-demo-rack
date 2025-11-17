@@ -1,0 +1,165 @@
+# General information
+name: "officerack-ax"
+version: 1.1.0
+type: app
+description: "Playground officerack example - HardwareConfiguration and simple IO-/Drive usage"
+targets:
+  - "1500"
+
+# Apax
+apaxVersion: 4.2.0
+
+# Content from other registries
+registries:
+  "@simatic-ax": "https://npm.pkg.github.com/"
+
+# Dependencies version-filter
+catalogs:
+  "@ax/simatic-ax": 2510.0.0
+
+# Tool-Dependencies
+devDependencies:
+  "@ax/sdk": 2510.0.0
+  "@ax/hardware-diagnostics": 1.0.0
+  "@ax/dcp-utility": 1.2.0
+  "@simatic-ax/snippetscollection": 1.1.0
+
+# Library-Dependencies
+dependencies:
+  "@ax/system-edgedetection": 10.2.7
+  "@simatic-ax/sinamics-drive-functions": 1.1.0
+
+# Project variables
+variables:
+  # security variables
+  # Disclaimer : This is just an example. Never store your credentials in plain-text!
+
+  # The master password, that protects confidential configuration data on the plc
+  # Please use a password that is case sensitive (1 big and 1 small letter), a special character and a number.
+  # Disclaimer : This is just an example. Never store your credentials in plain-text!
+  MASTER_PW: "1AxPLCpassword"
+  # The locations of the certificate files
+  TLS_CONNECT_CERTFILE: "certificate/reference_x509.crt"
+  TLS_IMPORT_CERTFILE: "certificate/containerWithPublicAndPrivateKeys_x509.p12"
+  # The password for importing the certificate.
+  # Disclaimer : This is just an example. Never store your credentials in plain-text!
+  CERT_PASSPHRASE: "playground-officerack-ax"
+  # The password for the user specified in the plc's hardware configuration. A password should not be in the code as a readable variable. This is only the case here as it is a simple example.
+  USER_NAME: "Adam"
+  USER_PASSWORD: "A1234567z!"
+
+  # loading variables
+  IP_ADDRESS: "192.168.170.121"
+  PLC_NAME: "vplc-427e"
+
+  # hw-loading variables
+  HW_BIN_FOLDER: ./bin/hw
+  INPUT_HWC: --input hwc/hw_templates --input hwc/rack
+
+  # sw-loading variables
+  SW_BIN_FOLDER: "./bin/1500"
+  DEFINED_PREPROCESSOR_SYMBOLS:
+    - MACHINE_SPEEDDRV_CONFIG
+    # - MACHINE_POSDRV_CONFIG
+  APAX_BUILD_ARGS:
+    - --debug
+
+  # commissioning variables [adjust]
+  DCP_SOURCE_MAC: "??:??:??:??:??:??" # pg-pc-network-interface
+  DCP_TARGET_MAC: "??:??:??:??:??:??" # device-interface
+  DCP_NAME: "vplc-427e"
+  DCP_IP: "192.168.170.121"
+  DCP_SUBNETMASK: "255.255.255.0"
+  DCP_GATEWAY: "192.168.170.1"
+
+# Apax scripts
+scripts:
+  ############### HW Configuration - Catalog Scripts ##################################################
+  hw_install_gsd:
+    - hwc install-gsd -i hwc/gsd -f # will be installed globally
+    - hwc get-supported-devices > hwc/hw_catalog.txt # overview of all supported hw-devices (installed GSDs + HW-support packages)
+  hw_generate_config_templates:
+    #S7-1517V (PLC)
+    - hwc generate-template-file --order-number "6ES7 587-1AP00-0AB0" --version "V4.0" --output hwc/hw_templates/cpu1517v_v40.hwl.yaml
+    #S200 (Drive)
+    - hwc generate-template-file --gsd-file-name "GSDML-V2.42-Siemens-Sinamics_S200-20240814.xml" --gsd-id "IDD_S200B-V6.4" --output hwc/hw_templates/s200b_im_v64.hwl.yaml
+    - hwc generate-template-file --gsd-file-name "GSDML-V2.42-Siemens-Sinamics_S200-20240814.xml" --gsd-id "IDM_DRVSPD" --output hwc/hw_templates/s200_drivespeed.hwl.yaml
+    - hwc generate-template-file --gsd-file-name "GSDML-V2.42-Siemens-Sinamics_S200-20240814.xml" --gsd-id "IDM_DRVPOS" --output hwc/hw_templates/s200_drivepos.hwl.yaml
+    #ET200SP (IO Board)
+    - hwc generate-template-file --gsd-file-name "GSDML-V2.45-SIEMENS-ET200SP-20241104.XML" --gsd-id "DIM HF/2 V4.2" --output hwc/hw_templates/et200sp_im_155_6_pn_hf_v42.hwl.yaml
+    - hwc generate-template-file --gsd-file-name "GSDML-V2.45-SIEMENS-ET200SP-20241104.XML" --gsd-id "DI 8x24VDC HF V2.0" --output hwc/hw_templates/et200sp_di8x24vdc_hf_v20.hwl.yaml
+    - hwc generate-template-file --gsd-file-name "GSDML-V2.45-SIEMENS-ET200SP-20241104.XML" --gsd-id "DI 8x24VDC HS" --output hwc/hw_templates/et200sp_di8x24vdc_hs_v10.hwl.yaml
+    - hwc generate-template-file --gsd-file-name "GSDML-V2.45-SIEMENS-ET200SP-20241104.XML" --gsd-id "DQ 8x24VDC/0,5A HF V2.0" --output hwc/hw_templates/et200sp_dq8x24vdc05a_hf_v20.hwl.yaml
+    - hwc generate-template-file --gsd-file-name "GSDML-V2.45-SIEMENS-ET200SP-20241104.XML" --gsd-id "DQ 8x24VDC/0,5A ST V0.0" --output hwc/hw_templates/et200sp_dq8x24vdc05a_st_v00.hwl.yaml
+    - hwc generate-template-file --gsd-file-name "GSDML-V2.45-SIEMENS-ET200SP-20241104.XML" --gsd-id "AI 4xI 2-/4-wire ST V2.0" --output hwc/hw_templates/et200sp_ai4xi24wire_st_v11.hwl.yaml
+    - hwc generate-template-file --gsd-file-name "GSDML-V2.45-SIEMENS-ET200SP-20241104.XML" --gsd-id "Servermodule_without_io" --output hwc/hw_templates/et200sp_servermod_wo_io.hwl.yaml
+
+  ######################################################################################################
+
+  ############### HW Configuration - Inital runs for new PLCs / Name changes ###########################
+  # The bash function provide the easy creation of certificates via open ssl and then moves the certificate to the certificate folder.
+  # In order to call the script, the access level must be authorized at the beginning.
+  create_certificate:
+    - chmod +x certificate/createCertificateViaOpenSSL.sh
+    - certificate/createCertificateViaOpenSSL.sh
+    - echo "set in the apax.yml the variable CERT_PASSPHRASE to the value that you insert as password of import of certificate"
+  # Creates the file for the security configuration for the PLC
+  hwc_setup_secure_communication:
+    - hwc setup-secure-communication --module-name $PLC_NAME $INPUT_HWC --master-password:$MASTER_PW
+    # Imports the certificate for TLS (Transport Layer Security) communication in the project to the PLC
+    #hwc_import_certificate:
+    - hwc import-certificate --module-name $PLC_NAME $INPUT_HWC --certificate $TLS_IMPORT_CERTFILE --passphrase $CERT_PASSPHRASE --purpose TLS
+    - hwc import-certificate --module-name $PLC_NAME $INPUT_HWC --certificate $TLS_IMPORT_CERTFILE --passphrase $CERT_PASSPHRASE --purpose OpcUAServer
+    - hwc import-certificate --module-name $PLC_NAME $INPUT_HWC --certificate $TLS_IMPORT_CERTFILE --passphrase $CERT_PASSPHRASE --purpose WebServer
+    # Creates the user(s) for the PLC
+    #hwc_create_user:
+    - hwc manage-users $INPUT_HWC --module-name $PLC_NAME set-password --username $USER_NAME --password $USER_PASSWORD
+  ######################################################################################################
+
+  # Hardware build+load scripts
+  # Compile the hardware description (input:sources) to target specific data (output:binaries) and update the IO- and HwIdent mapping (SystemConstants)
+  hw_build: hwc compile $INPUT_HWC --output $HW_BIN_FOLDER
+  hw_load_initial: hwld load --input $HW_BIN_FOLDER/$PLC_NAME -t $IP_ADDRESS --accept-security-disclaimer -C $TLS_CONNECT_CERTFILE -M:$MASTER_PW #--username $USER_NAME --password $USER_PASSWORD
+  hw_load_c: hwld load --input $HW_BIN_FOLDER/$PLC_NAME -t $IP_ADDRESS --accept-security-disclaimer -C $TLS_CONNECT_CERTFILE --username $USER_NAME --password $USER_PASSWORD
+  hw_reset: hwld load --reset-plc:KeepOnlyIP -t $IP_ADDRESS --accept-security-disclaimer -C $TLS_CONNECT_CERTFILE #--username $USER_NAME --password $USER_PASSWORD
+  hw_load:
+    - apax hw_build
+    - apax hw_load_c
+  hw_get_users:
+    - hwc manage-users $INPUT_HWC --module-name $PLC_NAME list
+
+  # Software load scripts
+  sw_load:
+    - apax build
+    - apax sld load --mode full --input $SW_BIN_FOLDER --target $IP_ADDRESS --restart --accept-security-disclaimer -C $TLS_CONNECT_CERTFILE
+  sw_load_delta:
+    - apax build
+    - apax sld load --mode delta --input $SW_BIN_FOLDER --target $IP_ADDRESS --restart --accept-reinit-variables --accept-security-disclaimer -C $TLS_CONNECT_CERTFILE
+
+  # Load combo-script
+  load_all:
+    - apax hw_load
+    - apax sw_load
+
+  # diag - basic plc operation / info
+  vplc-run: plc-info set-mode run -t $IP_ADDRESS -C $TLS_CONNECT_CERTFILE
+  vplc-stop: plc-info set-mode stop -t $IP_ADDRESS -C $TLS_CONNECT_CERTFILE
+  vplc-mres: plc-info memory-reset -t $IP_ADDRESS -C $TLS_CONNECT_CERTFILE
+  vplc-reset: hwld load --reset-plc:All --target $IP_ADDRESS  --accept-security-disclaimer #--username $USER_NAME --password $USER_PASSWORD -M:$MASTER_PW
+  vplc-info: plc-info inspect -t $IP_ADDRESS -C $TLS_CONNECT_CERTFILE
+  vplc-perf: plc-info performance -t $IP_ADDRESS -C $TLS_CONNECT_CERTFILE --continuous
+  # diag - additional plc operation
+  show-alarms: plc-control alarms -t $IP_ADDRESS -C $TLS_CONNECT_CERTFILE --continuous
+  show-aslog: plc-control diag -t $IP_ADDRESS -C $TLS_CONNECT_CERTFILE --continuous
+  show-aslog-alt: diag-buff -t $IP_ADDRESS -C $TLS_CONNECT_CERTFILE --continuous
+  comp-hw: hw-diag compare -t $IP_ADDRESS -C $TLS_CONNECT_CERTFILE
+  comp-sw: sld compare -m All -t $IP_ADDRESS -i $SW_BIN_FOLDER -C $TLS_CONNECT_CERTFILE -l Debug
+  show-montable: mon --file **/debug/mon/drivecontrol.mon -t $IP_ADDRESS -C $TLS_CONNECT_CERTFILE --continuously
+
+  # commissioning
+  list-interfaces: dcp-utility list-interfaces
+  discover: dcp-utility discover --source-mac $DCP_SOURCE_MAC --timeout 3000
+  send-ledblink: dcp-utility blink --source-mac $DCP_SOURCE_MAC --target-mac $DCP_TARGET_MAC --continuous
+  set-ip: dcp-utility set-ip --source-mac $DCP_SOURCE_MAC --target-mac $DCP_TARGET_MAC --ip $DCP_IP --subnet-mask $DCP_SUBNETMASK --gateway $DCP_GATEWAY
+  set-name: dcp-utility set-name --source-mac $DCP_SOURCE_MAC --target-mac $DCP_TARGET_MAC --name $DCP_NAME
+  get-cert: plc-cert -t $DCP_IP -o "certificate\certificateForConnectionNew.crt"

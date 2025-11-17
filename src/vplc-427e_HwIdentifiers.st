@@ -1,0 +1,59 @@
+CONFIGURATION HardwareIDs
+    VAR_GLOBAL CONSTANT
+        device_drive_center_s200_HwID : UINT := UINT#282;
+        device_drive_center_s200_Rack_HwID : UINT := UINT#285;
+        device_drive_center_s200_drivespd_HwID : UINT := UINT#287;
+        device_drive_center_s200_drivespd_Module_Access_Point_HwID : UINT := UINT#289;
+        device_drive_center_s200_drivespd_leeres_Submodul_HwID : UINT := UINT#288;
+        device_drive_center_s200_s200_center_HwID : UINT := UINT#286;
+        device_drive_center_s200_s200_center_PN_IO_HwID : UINT := UINT#281;
+        device_drive_center_s200_s200_center_PN_IO_Port_1_HwID : UINT := UINT#283;
+        device_drive_center_s200_s200_center_PN_IO_Port_2_HwID : UINT := UINT#284;
+        device_drive_center_s200_s200_center_SINAMICS_S200_PN_V6_4_HwID : UINT := UINT#291;
+        device_drive_center_s200_telegram1_HwID : UINT := UINT#290;
+        device_drive_left_s200_HwID : UINT := UINT#293;
+        device_drive_left_s200_Rack_HwID : UINT := UINT#296;
+        device_drive_left_s200_drivespd_HwID : UINT := UINT#298;
+        device_drive_left_s200_drivespd_Module_Access_Point_HwID : UINT := UINT#301;
+        device_drive_left_s200_drivespd_leeres_Submodul_HwID : UINT := UINT#299;
+        device_drive_left_s200_s200_left_HwID : UINT := UINT#297;
+        device_drive_left_s200_s200_left_PN_IO_HwID : UINT := UINT#292;
+        device_drive_left_s200_s200_left_PN_IO_Port_1_HwID : UINT := UINT#294;
+        device_drive_left_s200_s200_left_PN_IO_Port_2_HwID : UINT := UINT#295;
+        device_drive_left_s200_s200_left_SINAMICS_S200_PN_V6_4_HwID : UINT := UINT#303;
+        device_drive_left_s200_telegram1_HwID : UINT := UINT#302;
+        device_drive_right_s200_HwID : UINT := UINT#271;
+        device_drive_right_s200_Rack_HwID : UINT := UINT#274;
+        device_drive_right_s200_drivespd_HwID : UINT := UINT#276;
+        device_drive_right_s200_drivespd_Module_Access_Point_HwID : UINT := UINT#278;
+        device_drive_right_s200_drivespd_leeres_Submodul_HwID : UINT := UINT#277;
+        device_drive_right_s200_s200_right_HwID : UINT := UINT#275;
+        device_drive_right_s200_s200_right_PN_IO_HwID : UINT := UINT#270;
+        device_drive_right_s200_s200_right_PN_IO_Port_1_HwID : UINT := UINT#272;
+        device_drive_right_s200_s200_right_PN_IO_Port_2_HwID : UINT := UINT#273;
+        device_drive_right_s200_s200_right_SINAMICS_S200_PN_V6_4_HwID : UINT := UINT#280;
+        device_drive_right_s200_telegram1_HwID : UINT := UINT#279;
+        device_et200sp_HwID : UINT := UINT#258;
+        device_et200sp_Rack_HwID : UINT := UINT#261;
+        device_et200sp_ai4_1_AI_4xI_2__4_wire_ST_V2_0_HwID : UINT := UINT#264;
+        device_et200sp_di8_1_DI_8x24VDC_HF_V2_0_HwID : UINT := UINT#268;
+        device_et200sp_di8_2_DI_8x24VDC_HS_V1_0_HwID : UINT := UINT#267;
+        device_et200sp_dq8_1_DQ_8x24VDC_0_5A_HF_V2_0_HwID : UINT := UINT#266;
+        device_et200sp_dq8_2_DQ_8x24VDC_0_5A_ST_V0_0_HwID : UINT := UINT#265;
+        device_et200sp_im_155_6_HwID : UINT := UINT#262;
+        device_et200sp_im_155_6_IM_155_6_PN_2_HF_V4_2_HwID : UINT := UINT#269;
+        device_et200sp_im_155_6_PN_IO_HwID : UINT := UINT#257;
+        device_et200sp_im_155_6_Port_1_HwID : UINT := UINT#259;
+        device_et200sp_im_155_6_Port_2_HwID : UINT := UINT#260;
+        device_et200sp_server_mod_Servermodul_V1_1_0_Bytes_HwID : UINT := UINT#263;
+        device_plc_HwID : UINT := UINT#32;
+        device_plc_Rail_0_HwID : UINT := UINT#300;
+        device_plc_vplc_427e_HwID : UINT := UINT#48;
+        device_plc_vplc_427e_Card_reader_writer_1_HwID : UINT := UINT#51;
+        device_plc_vplc_427e_OPC_UA_1_HwID : UINT := UINT#117;
+        device_plc_vplc_427e_PROFINET_interface_1_HwID : UINT := UINT#64;
+        device_plc_vplc_427e_PROFINET_interface_1_Port_1_HwID : UINT := UINT#65;
+        profinet_io_system_HwID : UINT := UINT#256;
+
+    END_VAR
+END_CONFIGURATION

@@ -1,0 +1,31 @@
+# console left
+io_led_board_lc.ledleft0
+io_led_board_lc.ledleft1
+io_led_board_lc.ledleft2 
+io_led_board_lc.ledleft3 
+io_switch_board_lc_s.switchleft0
+io_switch_board_lc_s.switchleft1
+io_switch_board_lc_s.switchleft2
+io_switch_board_lc_s.switchleft3
+
+io_switch_board_lc_s.estop
+
+# console center
+io_led_board_lc.ledcenter0
+io_led_board_lc.ledcenter1
+io_led_board_cr.ledcenter2
+io_led_board_cr.ledcenter3
+io_switch_board_lc_s.switchcenter0
+io_switch_board_lc_s.switchcenter1
+io_switch_board_cr.switchcenter2
+io_switch_board_cr.switchcenter3
+
+# console right
+io_led_board_cr.ledright0
+io_led_board_cr.ledright1
+io_led_board_cr.ledright2
+io_led_board_cr.ledright3
+io_switch_board_cr.switchright0
+io_switch_board_cr.switchright1
+io_switch_board_cr.switchright2
+io_switch_board_cr.switchright3

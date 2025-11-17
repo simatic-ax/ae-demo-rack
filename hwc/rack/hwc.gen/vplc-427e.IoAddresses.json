@@ -1,0 +1,459 @@
+{
+  "Version": 2,
+  "IoAddresses": [
+    {
+      "Ref": "device_drive_center_s200/drivespd",
+      "HardwareIdentifier": 287,
+      "Submodules": [
+        {
+          "Name": "telegram1",
+          "Ref": "device_drive_center_s200/drivespd/telegram1",
+          "HardwareIdentifier": 290,
+          "Inputs": {
+            "StartAddress": "288.0",
+            "EndAddress": "291.7",
+            "Length": 32,
+            "Source": "UserDefined",
+            "SignalLayout": [
+              {
+                "Name": "Signals_0",
+                "Offset": 0,
+                "Length": 16,
+                "DataType": "Unsigned16"
+              },
+              {
+                "Name": "Signals_1",
+                "Offset": 16,
+                "Length": 16,
+                "DataType": "Unsigned16"
+              }
+            ]
+          },
+          "Outputs": {
+            "StartAddress": "288.0",
+            "EndAddress": "291.7",
+            "Length": 32,
+            "Source": "UserDefined",
+            "SignalLayout": [
+              {
+                "Name": "Signals_2",
+                "Offset": 0,
+                "Length": 16,
+                "DataType": "Unsigned16"
+              },
+              {
+                "Name": "Signals_3",
+                "Offset": 16,
+                "Length": 16,
+                "DataType": "Unsigned16"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Ref": "device_drive_left_s200/drivespd",
+      "HardwareIdentifier": 298,
+      "Submodules": [
+        {
+          "Name": "telegram1",
+          "Ref": "device_drive_left_s200/drivespd/telegram1",
+          "HardwareIdentifier": 302,
+          "Inputs": {
+            "StartAddress": "256.0",
+            "EndAddress": "259.7",
+            "Length": 32,
+            "Source": "UserDefined",
+            "SignalLayout": [
+              {
+                "Name": "Signals_0",
+                "Offset": 0,
+                "Length": 16,
+                "DataType": "Unsigned16"
+              },
+              {
+                "Name": "Signals_1",
+                "Offset": 16,
+                "Length": 16,
+                "DataType": "Unsigned16"
+              }
+            ]
+          },
+          "Outputs": {
+            "StartAddress": "256.0",
+            "EndAddress": "259.7",
+            "Length": 32,
+            "Source": "UserDefined",
+            "SignalLayout": [
+              {
+                "Name": "Signals_2",
+                "Offset": 0,
+                "Length": 16,
+                "DataType": "Unsigned16"
+              },
+              {
+                "Name": "Signals_3",
+                "Offset": 16,
+                "Length": 16,
+                "DataType": "Unsigned16"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Ref": "device_drive_right_s200/drivespd",
+      "HardwareIdentifier": 276,
+      "Submodules": [
+        {
+          "Name": "telegram1",
+          "Ref": "device_drive_right_s200/drivespd/telegram1",
+          "HardwareIdentifier": 279,
+          "Inputs": {
+            "StartAddress": "320.0",
+            "EndAddress": "323.7",
+            "Length": 32,
+            "Source": "UserDefined",
+            "SignalLayout": [
+              {
+                "Name": "Signals_0",
+                "Offset": 0,
+                "Length": 16,
+                "DataType": "Unsigned16"
+              },
+              {
+                "Name": "Signals_1",
+                "Offset": 16,
+                "Length": 16,
+                "DataType": "Unsigned16"
+              }
+            ]
+          },
+          "Outputs": {
+            "StartAddress": "320.0",
+            "EndAddress": "323.7",
+            "Length": 32,
+            "Source": "UserDefined",
+            "SignalLayout": [
+              {
+                "Name": "Signals_2",
+                "Offset": 0,
+                "Length": 16,
+                "DataType": "Unsigned16"
+              },
+              {
+                "Name": "Signals_3",
+                "Offset": 16,
+                "Length": 16,
+                "DataType": "Unsigned16"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Ref": "device_et200sp/ai4_1",
+      "Submodules": [
+        {
+          "Name": "AI 4xI 2-/4-wire ST V2.0",
+          "HardwareIdentifier": 264,
+          "Inputs": {
+            "StartAddress": "0.0",
+            "EndAddress": "7.7",
+            "Length": 64,
+            "Source": "UserDefined",
+            "SignalLayout": [
+              {
+                "Name": "Signals_0",
+                "Offset": 0,
+                "Length": 16,
+                "DataType": "Integer16"
+              },
+              {
+                "Name": "Signals_1",
+                "Offset": 16,
+                "Length": 16,
+                "DataType": "Integer16"
+              },
+              {
+                "Name": "Signals_2",
+                "Offset": 32,
+                "Length": 16,
+                "DataType": "Integer16"
+              },
+              {
+                "Name": "Signals_3",
+                "Offset": 48,
+                "Length": 16,
+                "DataType": "Integer16"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Ref": "device_et200sp/di8_1",
+      "Submodules": [
+        {
+          "Name": "DI 8x24VDC HF V2.0",
+          "HardwareIdentifier": 268,
+          "Inputs": {
+            "StartAddress": "9.0",
+            "EndAddress": "9.7",
+            "Length": 8,
+            "Source": "UserDefined",
+            "SignalLayout": [
+              {
+                "Name": "Signals_0",
+                "Offset": 0,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_1",
+                "Offset": 1,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_2",
+                "Offset": 2,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_3",
+                "Offset": 3,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_4",
+                "Offset": 4,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_5",
+                "Offset": 5,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_6",
+                "Offset": 6,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_7",
+                "Offset": 7,
+                "Length": 1,
+                "DataType": "Boolean"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Ref": "device_et200sp/di8_2",
+      "Submodules": [
+        {
+          "Name": "DI 8x24VDC HS V1.0",
+          "HardwareIdentifier": 267,
+          "Inputs": {
+            "StartAddress": "8.0",
+            "EndAddress": "8.7",
+            "Length": 8,
+            "Source": "UserDefined",
+            "SignalLayout": [
+              {
+                "Name": "Signals_0",
+                "Offset": 0,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_1",
+                "Offset": 1,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_2",
+                "Offset": 2,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_3",
+                "Offset": 3,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_4",
+                "Offset": 4,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_5",
+                "Offset": 5,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_6",
+                "Offset": 6,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_7",
+                "Offset": 7,
+                "Length": 1,
+                "DataType": "Boolean"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Ref": "device_et200sp/dq8_1",
+      "Submodules": [
+        {
+          "Name": "DQ 8x24VDC/0.5A HF V2.0",
+          "HardwareIdentifier": 266,
+          "Outputs": {
+            "StartAddress": "1.0",
+            "EndAddress": "1.7",
+            "Length": 8,
+            "Source": "UserDefined",
+            "SignalLayout": [
+              {
+                "Name": "Signals_0",
+                "Offset": 0,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_1",
+                "Offset": 1,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_2",
+                "Offset": 2,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_3",
+                "Offset": 3,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_4",
+                "Offset": 4,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_5",
+                "Offset": 5,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_6",
+                "Offset": 6,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_7",
+                "Offset": 7,
+                "Length": 1,
+                "DataType": "Boolean"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Ref": "device_et200sp/dq8_2",
+      "Submodules": [
+        {
+          "Name": "DQ 8x24VDC/0.5A ST V0.0",
+          "HardwareIdentifier": 265,
+          "Outputs": {
+            "StartAddress": "0.0",
+            "EndAddress": "0.7",
+            "Length": 8,
+            "Source": "UserDefined",
+            "SignalLayout": [
+              {
+                "Name": "Signals_0",
+                "Offset": 0,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_1",
+                "Offset": 1,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_2",
+                "Offset": 2,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_3",
+                "Offset": 3,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_4",
+                "Offset": 4,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_5",
+                "Offset": 5,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_6",
+                "Offset": 6,
+                "Length": 1,
+                "DataType": "Boolean"
+              },
+              {
+                "Name": "Signals_7",
+                "Offset": 7,
+                "Length": 1,
+                "DataType": "Boolean"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

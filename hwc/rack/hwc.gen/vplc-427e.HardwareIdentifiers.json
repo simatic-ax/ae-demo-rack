@@ -1,0 +1,221 @@
+{
+  "Version": 1,
+  "HardwareIdentifiers": [
+    {
+      "Name": "device_drive_center_s200",
+      "Value": 282
+    },
+    {
+      "Name": "device_drive_center_s200~Rack",
+      "Value": 285
+    },
+    {
+      "Name": "device_drive_center_s200~drivespd",
+      "Value": 287
+    },
+    {
+      "Name": "device_drive_center_s200~drivespd~Module Access Point",
+      "Value": 289
+    },
+    {
+      "Name": "device_drive_center_s200~drivespd~leeres Submodul",
+      "Value": 288
+    },
+    {
+      "Name": "device_drive_center_s200~s200_center",
+      "Value": 286
+    },
+    {
+      "Name": "device_drive_center_s200~s200_center~PN-IO",
+      "Value": 281
+    },
+    {
+      "Name": "device_drive_center_s200~s200_center~PN-IO~Port_1",
+      "Value": 283
+    },
+    {
+      "Name": "device_drive_center_s200~s200_center~PN-IO~Port_2",
+      "Value": 284
+    },
+    {
+      "Name": "device_drive_center_s200~s200_center~SINAMICS S200 PN V6.4",
+      "Value": 291
+    },
+    {
+      "Name": "device_drive_center_s200~telegram1",
+      "Value": 290
+    },
+    {
+      "Name": "device_drive_left_s200",
+      "Value": 293
+    },
+    {
+      "Name": "device_drive_left_s200~Rack",
+      "Value": 296
+    },
+    {
+      "Name": "device_drive_left_s200~drivespd",
+      "Value": 298
+    },
+    {
+      "Name": "device_drive_left_s200~drivespd~Module Access Point",
+      "Value": 301
+    },
+    {
+      "Name": "device_drive_left_s200~drivespd~leeres Submodul",
+      "Value": 299
+    },
+    {
+      "Name": "device_drive_left_s200~s200_left",
+      "Value": 297
+    },
+    {
+      "Name": "device_drive_left_s200~s200_left~PN-IO",
+      "Value": 292
+    },
+    {
+      "Name": "device_drive_left_s200~s200_left~PN-IO~Port_1",
+      "Value": 294
+    },
+    {
+      "Name": "device_drive_left_s200~s200_left~PN-IO~Port_2",
+      "Value": 295
+    },
+    {
+      "Name": "device_drive_left_s200~s200_left~SINAMICS S200 PN V6.4",
+      "Value": 303
+    },
+    {
+      "Name": "device_drive_left_s200~telegram1",
+      "Value": 302
+    },
+    {
+      "Name": "device_drive_right_s200",
+      "Value": 271
+    },
+    {
+      "Name": "device_drive_right_s200~Rack",
+      "Value": 274
+    },
+    {
+      "Name": "device_drive_right_s200~drivespd",
+      "Value": 276
+    },
+    {
+      "Name": "device_drive_right_s200~drivespd~Module Access Point",
+      "Value": 278
+    },
+    {
+      "Name": "device_drive_right_s200~drivespd~leeres Submodul",
+      "Value": 277
+    },
+    {
+      "Name": "device_drive_right_s200~s200_right",
+      "Value": 275
+    },
+    {
+      "Name": "device_drive_right_s200~s200_right~PN-IO",
+      "Value": 270
+    },
+    {
+      "Name": "device_drive_right_s200~s200_right~PN-IO~Port_1",
+      "Value": 272
+    },
+    {
+      "Name": "device_drive_right_s200~s200_right~PN-IO~Port_2",
+      "Value": 273
+    },
+    {
+      "Name": "device_drive_right_s200~s200_right~SINAMICS S200 PN V6.4",
+      "Value": 280
+    },
+    {
+      "Name": "device_drive_right_s200~telegram1",
+      "Value": 279
+    },
+    {
+      "Name": "device_et200sp",
+      "Value": 258
+    },
+    {
+      "Name": "device_et200sp~Rack",
+      "Value": 261
+    },
+    {
+      "Name": "device_et200sp~ai4_1~AI 4xI 2-/4-wire ST V2.0",
+      "Value": 264
+    },
+    {
+      "Name": "device_et200sp~di8_1~DI 8x24VDC HF V2.0",
+      "Value": 268
+    },
+    {
+      "Name": "device_et200sp~di8_2~DI 8x24VDC HS V1.0",
+      "Value": 267
+    },
+    {
+      "Name": "device_et200sp~dq8_1~DQ 8x24VDC/0.5A HF V2.0",
+      "Value": 266
+    },
+    {
+      "Name": "device_et200sp~dq8_2~DQ 8x24VDC/0.5A ST V0.0",
+      "Value": 265
+    },
+    {
+      "Name": "device_et200sp~im_155_6",
+      "Value": 262
+    },
+    {
+      "Name": "device_et200sp~im_155_6~IM 155-6 PN/2 HF V4.2",
+      "Value": 269
+    },
+    {
+      "Name": "device_et200sp~im_155_6~PN-IO",
+      "Value": 257
+    },
+    {
+      "Name": "device_et200sp~im_155_6~Port_1",
+      "Value": 259
+    },
+    {
+      "Name": "device_et200sp~im_155_6~Port_2",
+      "Value": 260
+    },
+    {
+      "Name": "device_et200sp~server_mod~Servermodul V1.1 (0 Bytes)",
+      "Value": 263
+    },
+    {
+      "Name": "device_plc",
+      "Value": 32
+    },
+    {
+      "Name": "device_plc~Rail_0",
+      "Value": 300
+    },
+    {
+      "Name": "device_plc~vplc-427e",
+      "Value": 48
+    },
+    {
+      "Name": "device_plc~vplc-427e~Card reader/writer_1",
+      "Value": 51
+    },
+    {
+      "Name": "device_plc~vplc-427e~OPC UA_1",
+      "Value": 117
+    },
+    {
+      "Name": "device_plc~vplc-427e~PROFINET_interface_1",
+      "Value": 64
+    },
+    {
+      "Name": "device_plc~vplc-427e~PROFINET_interface_1~Port_1",
+      "Value": 65
+    },
+    {
+      "Name": "profinet_io_system",
+      "Value": 256
+    }
+  ]
+}

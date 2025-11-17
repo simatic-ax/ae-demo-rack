@@ -1,0 +1,19 @@
+#general
+estopActive
+P1.driveack
+P1.speedCtrActive
+
+# driveLeft
+driveLeftActive
+driveLeftTargetSpeed
+P1.instDriveCtrlLeft._sinaSpeed.actualSpeed
+
+# driveCenter
+driveCenterActive
+driveCenterTargetSpeed
+P1.instDriveCtrlCenter._sinaSpeed.actualSpeed
+
+# driveRight
+driveRightActive
+driveRightTargetSpeed
+P1.instDriveCtrlRight._sinaSpeed.actualSpeed
