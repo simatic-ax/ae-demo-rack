@@ -1,14 +1,14 @@
 {
-  "name": "officerack-ax",
+  "name": "ae-demo-rack",
   "version": "1.1.0",
   "lockFileVersion": "2",
   "installStrategy": "strict",
   "root": {
-    "name": "officerack-ax",
+    "name": "ae-demo-rack",
     "version": "1.1.0",
     "dependencies": {
       "@ax/system-edgedetection": "10.2.7",
-      "@simatic-ax/sinamics-drive-functions": "1.1.0"
+      "@simatic-ax/sinamics-drive-functions": "2.0.0"
     },
     "devDependencies": {
       "@ax/sdk": "2510.0.0",
@@ -433,11 +433,11 @@
         "@ax/trace": "3.1.0"
       }
     },
-    "@ax/simatic-1500-distributedio": {
-      "name": "@ax/simatic-1500-distributedio",
-      "version": "10.0.3",
-      "integrity": "sha512-hqdBMPUAC3/YYVLKbw9VBPEJOBlmjB9NudoimrACISVV5bmzVBCi12Z16H+Q22VogpwN+cc/0pDRd/1AtmxcDw==",
-      "resolved": "https://registry.simatic-ax.siemens.io/@ax/simatic-1500-distributedio/-/simatic-1500-distributedio-10.0.3.tgz",
+    "@ax/simatic-distributedio": {
+      "name": "@ax/simatic-distributedio",
+      "version": "11.0.14",
+      "integrity": "sha512-H5PKBNfBwP/lWcTB1w/FBxMggHplVNfPkzUOyN5MBHe+0ehbyNX78SPUXC1cp9rqbgY9oWRvP0SCzGtm0FR0Qw==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax/simatic-distributedio/-/simatic-distributedio-11.0.14.tgz",
       "dependencies": {}
     },
     "@ax/simatic-package-tool": {
@@ -715,12 +715,12 @@
     },
     "@simatic-ax/sinamics-drive-functions": {
       "name": "@simatic-ax/sinamics-drive-functions",
-      "version": "1.1.0",
-      "integrity": "sha512-9ArttCtLfDB+VqIJ6v4j3yEE8vZoCwW5RFTzZgABkUj2vstYPPTiuqRSAQxplUmoGMS0g6moeDieCkXPSCexTw==",
-      "resolved": "https://npm.pkg.github.com/download/@simatic-ax/sinamics-drive-functions/1.1.0/5ecd13952171ed703a10c55be26acb49204e3431",
+      "version": "2.0.0",
+      "integrity": "sha512-CJBoXzUk08i+Gf72FkVzTqhpdgGUUK2hUtinycgLmsH/H28pfhd2w2dAr74SiSU8AXl7uMY5pNE2SfabtHprlw==",
+      "resolved": "https://npm.pkg.github.com/download/@simatic-ax/sinamics-drive-functions/2.0.0/ab466488728b1218a1009681d40c49339f18dfd4",
       "dependencies": {
-        "@ax/simatic-1500-distributedio": "^10.0.1",
-        "@ax/system-serde": "^10.0.24"
+        "@ax/simatic-distributedio": "^11.0.14",
+        "@ax/system-serde": "^10.2.7"
       }
     },
     "@simatic-ax/snippetscollection": {
