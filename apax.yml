@@ -15,18 +15,18 @@ registries:
 
 # Dependencies version-filter
 catalogs:
-  "@ax/simatic-ax": 2510.0.0
+  "@ax/simatic-ax": 2510.10.0
 
 # Tool-Dependencies
 devDependencies:
-  "@ax/sdk": 2510.0.0
-  "@ax/hardware-diagnostics": 1.0.0
+  "@ax/sdk": 2510.10.0
+  "@ax/hardware-diagnostics": 1.1.1
   "@ax/dcp-utility": 1.2.0
   "@simatic-ax/snippetscollection": 1.1.0
 
 # Library-Dependencies
 dependencies:
-  "@ax/system-edgedetection": 10.2.7
+  "@ax/system-edgedetection": 10.4.16
   "@simatic-ax/sinamics-drive-functions": 1.1.0
 
 # Project variables
