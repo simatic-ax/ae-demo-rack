@@ -27,7 +27,7 @@ devDependencies:
 # Library-Dependencies
 dependencies:
   "@ax/system-edgedetection": 10.2.7
-  "@simatic-ax/sinamics-drive-functions": 1.1.0
+  "@simatic-ax/sinamics-drive-functions": 2.0.0
 
 # Project variables
 variables:
