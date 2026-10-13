@@ -433,6 +433,16 @@
         "@ax/trace": "3.1.0"
       }
     },
+    "@ax/simatic-communication": {
+      "name": "@ax/simatic-communication",
+      "version": "11.0.1",
+      "integrity": "sha512-CoQ4vgg6sqdNhbDxU7VitXtSAD0IhvJNtD5Dg+1copXHaF6QFGXCVHVGJ0E541BVDeTw+/xtuUE9m7sLmXYTxA==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax/simatic-communication/-/simatic-communication-11.0.1.tgz",
+      "dependencies": {
+        "@ax/system-strings": "^10.0.24",
+        "@ax/system-timer": "^10.0.24"
+      }
+    },
     "@ax/simatic-distributedio": {
       "name": "@ax/simatic-distributedio",
       "version": "11.0.14",
@@ -564,6 +574,13 @@
       "resolved": "https://registry.simatic-ax.siemens.io/@ax/system-conversion/-/system-conversion-10.2.7.tgz",
       "dependencies": {}
     },
+    "@ax/system-data": {
+      "name": "@ax/system-data",
+      "version": "10.2.7",
+      "integrity": "sha512-pb9PriKAEfwDC5+nSWcY+l2kLzG0B+hJgXdmBspQg+5A/rGjyqOHYx+BHY64RPSCYgs7KIK6cUUIRx4gaSujfQ==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax/system-data/-/system-data-10.2.7.tgz",
+      "dependencies": {}
+    },
     "@ax/system-datetime": {
       "name": "@ax/system-datetime",
       "version": "10.2.7",
@@ -604,6 +621,13 @@
         "@ax/system-datetime": "^10.2.7",
         "@ax/system-conversion": "^10.2.7"
       }
+    },
+    "@ax/system-timer": {
+      "name": "@ax/system-timer",
+      "version": "10.2.7",
+      "integrity": "sha512-wTOcskC9SOaDz29fBngIIKyJWm7bFpVNYqWrLNqL8FqFwQ6Lv24nv4e0d6buoZ7WdB37qbfe/ZS360P/t4SyHQ==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax/system-timer/-/system-timer-10.2.7.tgz",
+      "dependencies": {}
     },
     "@ax/target-llvm": {
       "name": "@ax/target-llvm",
