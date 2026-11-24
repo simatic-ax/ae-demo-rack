@@ -8,7 +8,7 @@
     "version": "1.1.0",
     "dependencies": {
       "@ax/system-edgedetection": "10.2.7",
-      "@simatic-ax/sinamics-drive-functions": "2.0.0"
+      "@simatic-ax/sinamics-drive-functions": "3.0.0"
     },
     "devDependencies": {
       "@ax/sdk": "2510.0.0",
@@ -21,6 +21,81 @@
     }
   },
   "packages": {
+    "@ax-as/s7-communication-lib": {
+      "name": "@ax-as/s7-communication-lib",
+      "version": "12.0.3",
+      "integrity": "sha512-ylgrPvKyU8r9mwJ/JMoTcnvkXET4NtuVQTdETgPrWvTL8CEsYWc8Ag+POeC1yLt3JnEiQFNwJl4yBU/Woz5oiA==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax-as/s7-communication-lib/-/s7-communication-lib-12.0.3.tgz",
+      "dependencies": {
+        "@ax-as/system-strings-lib": "^11.0.205",
+        "@ax-as/system-timer-lib": "^11.0.205"
+      }
+    },
+    "@ax-as/s7-distributedio-lib": {
+      "name": "@ax-as/s7-distributedio-lib",
+      "version": "12.0.39",
+      "integrity": "sha512-OKZ6ZubVp/ZNdwmKJAesOkJ+DAZWB5Fqv8OFwuE9JTXc683VCKM0HQWnf2D6eUF6J5BpEFUQ+aauJPuYwwWFAQ==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax-as/s7-distributedio-lib/-/s7-distributedio-lib-12.0.39.tgz",
+      "dependencies": {
+        "@ax-as/s7-communication-lib": "^12.0.3",
+        "@ax-as/system-data-lib": "^11.0.205"
+      }
+    },
+    "@ax-as/system-conversion-lib": {
+      "name": "@ax-as/system-conversion-lib",
+      "version": "11.0.232",
+      "integrity": "sha512-wWf8ZdFEHECebFCBbKpZXppUGWXpsdpZM6xIxNtfBLJWcjqJKQXWg7SSg+Z1DFZlIrn3s0H/hN0wSkgWsyTeGA==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax-as/system-conversion-lib/-/system-conversion-lib-11.0.232.tgz",
+      "dependencies": {}
+    },
+    "@ax-as/system-data-lib": {
+      "name": "@ax-as/system-data-lib",
+      "version": "11.0.232",
+      "integrity": "sha512-z0FcGuPeFjXhF70XcO6gnTwAPhay+B+/uYoksh9UMcHEczl1isRIVNC6Ly3nJx0ebd7biBAfg5oFPfUjxeC3ZQ==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax-as/system-data-lib/-/system-data-lib-11.0.232.tgz",
+      "dependencies": {}
+    },
+    "@ax-as/system-datetime-lib": {
+      "name": "@ax-as/system-datetime-lib",
+      "version": "11.0.232",
+      "integrity": "sha512-sElSgp/pfnR+bpqwqsS9qgqUxlXi2ueQMxenGmyKnvCVI4DVzvT4FzByAhZ9345FUey1YF8iEjbBofOXFK56vQ==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax-as/system-datetime-lib/-/system-datetime-lib-11.0.232.tgz",
+      "dependencies": {}
+    },
+    "@ax-as/system-math-lib": {
+      "name": "@ax-as/system-math-lib",
+      "version": "11.0.232",
+      "integrity": "sha512-tu5qfNyuRjsGrsDJufYNC+J9pklb77S25qRCWOLd6J2y3OPlEp+hjh7bkc52nMpAWIptBhW/MvZhivBMNSf+Kw==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax-as/system-math-lib/-/system-math-lib-11.0.232.tgz",
+      "dependencies": {}
+    },
+    "@ax-as/system-serde-lib": {
+      "name": "@ax-as/system-serde-lib",
+      "version": "11.0.232",
+      "integrity": "sha512-2x6tnX01wV8blfXjt+b0nfT4b7jCELgDqpJjTbI5PaehCeSz2oESqxuJqiGFvt1bygVbbE1s3p2KYcS6DShJOg==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax-as/system-serde-lib/-/system-serde-lib-11.0.232.tgz",
+      "dependencies": {
+        "@ax-as/system-strings-lib": "^11.0.232"
+      }
+    },
+    "@ax-as/system-strings-lib": {
+      "name": "@ax-as/system-strings-lib",
+      "version": "11.0.232",
+      "integrity": "sha512-HTC3vR691CtIqhdlFdLZxijz+03jm1M0fnB3aaAL2MZ1w+9MwDMoYMrZmEAPx9UXY7gh4L7Qvdju0fyNUcdtRA==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax-as/system-strings-lib/-/system-strings-lib-11.0.232.tgz",
+      "dependencies": {
+        "@ax-as/system-conversion-lib": "^11.0.232",
+        "@ax-as/system-datetime-lib": "^11.0.232",
+        "@ax-as/system-math-lib": "^11.0.232"
+      }
+    },
+    "@ax-as/system-timer-lib": {
+      "name": "@ax-as/system-timer-lib",
+      "version": "11.0.232",
+      "integrity": "sha512-Ic/L+puH3utQj8vC3/FWRjQPgv6MDNuiOrkT38nw8dq2UHlRgNE1/epCbIED1qpKKeNVq8xIwfN8bKqTXGf7Ug==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax-as/system-timer-lib/-/system-timer-lib-11.0.232.tgz",
+      "dependencies": {}
+    },
     "@ax/apax-build": {
       "name": "@ax/apax-build",
       "version": "2.1.79",
@@ -270,7 +345,8 @@
       "cpu": [
         "x64"
       ],
-      "dependencies": {}
+      "dependencies": {},
+      "deprecated": "This package version is no longer supported. It is your responsibility to use supported versions. For more information, visit https://docs.industrial-operations-x.siemens.cloud/access?ax%3ApackageName=%40ax%2Freleases&ft:topicTitle=Legal+conditions&ax%3Afilepath=index."
     },
     "@ax/mod": {
       "name": "@ax/mod",
@@ -433,23 +509,6 @@
         "@ax/trace": "3.1.0"
       }
     },
-    "@ax/simatic-communication": {
-      "name": "@ax/simatic-communication",
-      "version": "11.0.1",
-      "integrity": "sha512-CoQ4vgg6sqdNhbDxU7VitXtSAD0IhvJNtD5Dg+1copXHaF6QFGXCVHVGJ0E541BVDeTw+/xtuUE9m7sLmXYTxA==",
-      "resolved": "https://registry.simatic-ax.siemens.io/@ax/simatic-communication/-/simatic-communication-11.0.1.tgz",
-      "dependencies": {
-        "@ax/system-strings": "^10.0.24",
-        "@ax/system-timer": "^10.0.24"
-      }
-    },
-    "@ax/simatic-distributedio": {
-      "name": "@ax/simatic-distributedio",
-      "version": "11.0.14",
-      "integrity": "sha512-H5PKBNfBwP/lWcTB1w/FBxMggHplVNfPkzUOyN5MBHe+0ehbyNX78SPUXC1cp9rqbgY9oWRvP0SCzGtm0FR0Qw==",
-      "resolved": "https://registry.simatic-ax.siemens.io/@ax/simatic-distributedio/-/simatic-distributedio-11.0.14.tgz",
-      "dependencies": {}
-    },
     "@ax/simatic-package-tool": {
       "name": "@ax/simatic-package-tool",
       "version": "2.0.17",
@@ -574,13 +633,6 @@
       "resolved": "https://registry.simatic-ax.siemens.io/@ax/system-conversion/-/system-conversion-10.2.7.tgz",
       "dependencies": {}
     },
-    "@ax/system-data": {
-      "name": "@ax/system-data",
-      "version": "10.2.7",
-      "integrity": "sha512-pb9PriKAEfwDC5+nSWcY+l2kLzG0B+hJgXdmBspQg+5A/rGjyqOHYx+BHY64RPSCYgs7KIK6cUUIRx4gaSujfQ==",
-      "resolved": "https://registry.simatic-ax.siemens.io/@ax/system-data/-/system-data-10.2.7.tgz",
-      "dependencies": {}
-    },
     "@ax/system-datetime": {
       "name": "@ax/system-datetime",
       "version": "10.2.7",
@@ -602,15 +654,6 @@
       "resolved": "https://registry.simatic-ax.siemens.io/@ax/system-math/-/system-math-10.2.7.tgz",
       "dependencies": {}
     },
-    "@ax/system-serde": {
-      "name": "@ax/system-serde",
-      "version": "10.2.7",
-      "integrity": "sha512-v5NYdmNQhrlLdjvuKUo8APcqMUqlDwWVFjoJNM9x9fAPnX2VaOdkKtplQ9usy9/pE4rZGM9hrtevBwQlcpZsaw==",
-      "resolved": "https://registry.simatic-ax.siemens.io/@ax/system-serde/-/system-serde-10.2.7.tgz",
-      "dependencies": {
-        "@ax/system-strings": "^10.2.7"
-      }
-    },
     "@ax/system-strings": {
       "name": "@ax/system-strings",
       "version": "10.2.7",
@@ -621,13 +664,6 @@
         "@ax/system-datetime": "^10.2.7",
         "@ax/system-conversion": "^10.2.7"
       }
-    },
-    "@ax/system-timer": {
-      "name": "@ax/system-timer",
-      "version": "10.2.7",
-      "integrity": "sha512-wTOcskC9SOaDz29fBngIIKyJWm7bFpVNYqWrLNqL8FqFwQ6Lv24nv4e0d6buoZ7WdB37qbfe/ZS360P/t4SyHQ==",
-      "resolved": "https://registry.simatic-ax.siemens.io/@ax/system-timer/-/system-timer-10.2.7.tgz",
-      "dependencies": {}
     },
     "@ax/target-llvm": {
       "name": "@ax/target-llvm",
@@ -739,12 +775,12 @@
     },
     "@simatic-ax/sinamics-drive-functions": {
       "name": "@simatic-ax/sinamics-drive-functions",
-      "version": "2.0.0",
-      "integrity": "sha512-CJBoXzUk08i+Gf72FkVzTqhpdgGUUK2hUtinycgLmsH/H28pfhd2w2dAr74SiSU8AXl7uMY5pNE2SfabtHprlw==",
-      "resolved": "https://npm.pkg.github.com/download/@simatic-ax/sinamics-drive-functions/2.0.0/ab466488728b1218a1009681d40c49339f18dfd4",
+      "version": "3.0.0",
+      "integrity": "sha512-LcXjvmNTd+4LB5BbDubFkyNwD1qTdtV65Bb1f3QnvsfowfLjKHR2nlPudzJTMS+y32bQDtR5v74mPtQIvavM7A==",
+      "resolved": "https://npm.pkg.github.com/download/@simatic-ax/sinamics-drive-functions/3.0.0/fbc85e48e12bbf56b501de9bb2ca87e02cc51a58",
       "dependencies": {
-        "@ax/simatic-distributedio": "^11.0.14",
-        "@ax/system-serde": "^10.2.7"
+        "@ax-as/s7-distributedio-lib": "^12.0.39",
+        "@ax-as/system-serde-lib": "^11.0.232"
       }
     },
     "@simatic-ax/snippetscollection": {
